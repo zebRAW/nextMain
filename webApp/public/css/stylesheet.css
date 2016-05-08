@@ -1,0 +1,265 @@
+body {
+    background-image : url("../images/bgpattern.png");
+    background-repeat : repeat;
+    font-family : 'Open Sans', sans-serif;
+}
+
+form {
+    background : none;
+}
+
+div#loadingContainer {
+    text-align : center;
+}
+
+p {
+    margin : 5px, 0px, 0px;
+    margin-top : 10px;
+    font-size : 10px;
+}
+
+br {
+    line-height: 5px;
+}
+
+button#generateNewGraph {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    margin-left: -85px;
+    margin-top: -25px;
+    height : 20px;
+    width : 80px;
+    outline : none;
+    border-radius : 2px;
+    background-color: #16a085;
+    color : white;
+    border: none;
+    font-size: 12px;
+}
+
+.search {
+    background-color: rgba(255,255,255,0.2);
+    width : 500px;
+    height : 36px;
+    position : absolute;
+    margin : 10px;
+    padding : 12px;
+    z-index: 5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    border-radius : 2px;
+}
+
+.graph {
+    background : none;
+    text-align : center;
+}
+
+.footer {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100px;
+    height: 25px;
+    margin-top: -25px;
+    margin-left: -50px;
+    color: rgba(255,255,255,0.3);
+    font-size: 8px;
+    font-weight: 100;
+}
+
+select {
+    height : 14px;
+    width : 35px;
+    background-color : #16a085;
+    color : white;
+    border: none;
+    border-radius : 2px;
+    outline : none;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+input#searchField {
+    background-color : rgba(255,255,255,0);
+    border-radius : 2px;
+    height : 38px;
+    width : 250px;
+    font-size : 16px;
+    padding-left: 6px;
+    padding-top : 2px;
+    border : solid #1abc9c 2px;
+    outline : none;
+    color : rgba(255,255,255,0.5);
+}
+
+
+input#searchField:focus {
+    background-color : rgba(255,255,255,0);
+    border-radius : 2px;
+    height : 38px;
+    width : 250px;
+    font-size : 16px;
+    padding-left: 6px;
+    padding-top : 2px;
+    border : solid #1abc9c 2px;
+    outline : none;
+    color : rgba(255,255,255,0.8);
+}
+
+select#serverDropdown {
+    height : 35px;
+    width: 50px;
+    margin-left : 10px;
+    background-color : #16a085;
+    color : white;
+    border: none;
+    border-radius : 2px;
+    outline : none;
+}
+
+button#searchButton {
+    height : 37px;
+    width : 75px;
+    margin-top : 1px;
+    float : right;
+    outline : none;
+    border-radius : 2px;
+    background-color: #16a085;
+    color : white;
+    border: none;
+}
+
+div#loadingDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -75px;
+    width: 120px;
+    height: 70px;
+    background-color : white;
+    color: #1abc9c;
+    z-index : 10;
+    border-radius: 6px;
+    padding : 15px;
+}
+
+div#progress {
+    margin-left : 15px;
+    width : 90px;
+    height : 2px;
+    background-color: lightgrey;
+    display : none;
+}
+
+div#progressBar {
+    position : absolute;
+    width : 9px;
+    height : 2px;
+    background-color : #1abc9c;
+}
+
+div#errorMessage {
+    position : absolute;
+    width : 200px;
+    height : 15px;
+    left : 50%;
+    margin-top : 80px;
+    margin-left : -115px;
+    padding : 15px;
+    background-color : rgba(192, 57, 43,0.8);
+    border-radius : 6px;
+    z-index : 20;
+    color : white;
+    font-size : 10px;
+    font-family : 'Open Sans', sans-serif;
+    text-align : center;
+}
+
+button#infoButton {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin-top: 15px;
+    margin-left: -73px;
+    left: 100%;
+    border: none;
+    outline: none;
+    color: none;
+    padding:0;
+    background-color: Transparent;
+    z-index: 3;
+    display: none;
+}
+
+button#settingsButton {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin-top: 15px;
+    margin-left: -39px;
+    left: 100%;
+    border: none;
+    outline: none;
+    color: none;
+    padding: 0;
+    background-color: Transparent;
+    z-index: 3;
+    display: none;
+}
+
+.icon {
+    opacity: 0.5;
+}
+
+div#infoDiv {
+     position: absolute;
+     width: 200px;
+     height: 137px;
+     font-size: 10px;
+     padding: 8px;
+     padding-top: 32px;
+     left: 100%;
+     margin-left: -224px;
+     margin-top: 10px;
+     color: white;
+     background-color: rgba(255,255,255,0.2);
+     border-radius: 6px;
+     text-align: justify;
+     display: none;
+     z-index: 2;
+}
+
+div#settingsDiv {
+    position: absolute;
+    width: 300px;
+    height: 137px;
+    font-size: 10px;
+    padding: 8px;
+    padding-top: 32px;
+    left: 100%;
+    margin-left: -324px;
+    margin-top: 10px;
+    color: white;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 6px;
+    text-align: justify;
+    display: none;
+    z-index: 2;
+}
+
+
+
+input[type='checkbox'] {
+    content:' ';
+    display:inline-block;
+    width: 9px;
+    height: 9px;
+    position: relative;
+    top:2px;
+    border: 1px solid #bbb;
+    background: transparent;
+    margin-right: 2em;
+    border-radius: 30px;
+}

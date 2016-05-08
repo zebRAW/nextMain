@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link href="public/css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="search">
+    <form id="search" class="searchForm">
+        <input type="text" name="summonerName" value="Summoner" id="searchField" onfocus="if(this.value == 'Summoner') { this.value = ''; }">
+        <select name="server" id="serverDropdown">
+        <option selected value="EUW">EUW</option>
+        <option value="NA">NA</option>
+        <option value="EUN">EUNE</option>
+        <option value="KR">KR</option>
+        <option value="LA1">LAS</option>
+        <option value="LA2">LAN</option>
+        <option value="OCE">OCE</option>
+        <option value="RU">RU</option>
+        <option value="TR">TR</option>
+        <option value="JP">JP</option>
+        <option value="BR">BR</option>
+        </select>
+        <button id="searchButton">Search</button>
+    </form>
+</div>
+<button id="infoButton"><img class="icon" src="images/info.png"></button>
+<button id="settingsButton"><img class="icon" src="images/settings.png"></button>
+<div id="infoDiv">If you want to know which champion you should main next based on your mastery data just put in your summoner name and server!</br>
+    This graph shows you how champion preferences are intertwined based on summoner mastery data! Click on a <font color="#e74c3c">champion</font> and it will show <font color="#1abc9c">first order</font> related champions and <font color="#3498db">second order</font> related champions! Just try it!</div>
+<div id="settingsDiv">
+    <input type="checkbox" id="lvl5"><label for="lvl5">Only summoners with Level 5 Mastery</label>
+    </br>
+    <input type="checkbox" id="weighted" checked><label for="weighted">Take champion popularity into account</label>
+    <br></br>
+    <select id="maxEdges">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><label for="maxEdges">Maximum number of child champions</label>
+    <br></br>
+    <select id="maxSeedChampions">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10" selected>10</option>
+    </select><label id="seedLabel" for="maxSeedChampions">Number of champions taken into account</label>
+    <br></br>
+    <select id="maxNextChampions">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select><label id="nextLabel" for="maxNextChampions">Number of recommended champions</label>
+    <br/>
+    <button id="generateNewGraph">Recalculate</button>
+</div>
+<div id="loadingContainer">
+    <div id='loadingDiv'>
+        <img src='public/images/working.gif'>
+        <p id="loadText">Please enable JavaScript to use this site :)</p>
+        <div id="progress"><div id="progressBar"></div></div>
+    </div>
+    <div id="graph" class="graph"></div>
+</div>
+<div class="footer">Alexander Bielski 2016</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"></script>
+<script src="public/javascripts/generateGraphFromData.js"></script>
+</body>
+</html>
